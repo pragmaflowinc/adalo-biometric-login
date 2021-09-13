@@ -1,0 +1,42 @@
+{
+  "name": "pragmaflow-biometrics",
+  "description": "TouchId and FaceId component for Adalo login",
+  "version": "1.0.13",
+  "main": "index.js",
+  "license": "ISC",
+  "author": "Steven McKeown",
+  "scripts": {
+    "start": "tsc && adalo dev",
+    "login": "adalo login",
+    "publish": "adalo publish"
+  },
+  "adalo": {
+    "logo": "./logo.png",
+    "displayName": "Pragmaflow Biometrics",
+    "components": [
+      {
+        "name": "BiometricLogin",
+        "manifest": "./src/components/BiometricLogin/manifest.json"
+      }
+    ],
+    "iosInstallScript": "./scripts/install_ios.sh",
+    "androidInstallScript": "./scripts/install_android.sh"
+  },
+  "devDependencies": {
+    "@adalo/cli": "^0.0.42",
+    "@babel/preset-flow": "^7.14.5",
+    "@types/react": "^17.0.3",
+    "@types/react-native": "^0.63.51",
+    "@types/react-native-vector-icons": "^6.4.8",
+    "react": "^16.9.0",
+    "react-art": "^16.6.0",
+    "react-dom": "^16.9.0",
+    "react-native-web": "^0.9.5",
+    "typescript": "^4.2.3"
+  },
+  "dependencies": {
+    "@protonapp/react-native-material-ui": "^2.0.6",
+    "react-native-keychain": "^7.0.0",
+    "react-native-vector-icons": "^8.1.0"
+  }
+}

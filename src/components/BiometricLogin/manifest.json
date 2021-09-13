@@ -1,0 +1,83 @@
+{
+  "displayName": "Biometric Login",
+  "defaultWidth": 160,
+  "defaultHeight": 24,
+  "components": "./index.js",
+  "icon": "./logo.png",
+  "props": [
+  {
+    "name": "title",
+    "displayName": "Label for the button",
+    "type": "text",
+    "default": "Log in with biometrics",
+    "styles": {
+      "fontFamily": "@body",
+      "color": "#757575",
+      "fontWeight": "normal"
+    }
+  },
+  {
+    "name": "icon",
+    "displayName": "Icon",
+    "type": "icon"
+  },
+  {
+    "name": "backgroundColor",
+    "displayName": "Background Color",
+    "type": "color",
+    "default": "@primary"
+  },
+    {
+      "name": "username",
+      "displayName": "Username for Enrollment",
+      "type": "text"
+    },
+    {
+      "name": "password",
+      "displayName": "Password for Enrollment",
+      "type": "text"
+    },
+    {
+      "name": "validCredentials",
+      "displayName": "Are the credentials valid?",
+      "type": "text",
+      "defaultValue": "false"
+    },
+    {
+      "name": "onCredentialRetriveSuccess",
+      "displayName": "Triggered when the biometrics successfully receives the stored username and passsword",
+      "type": "action",
+      "arguments": [
+        {
+          "type": "text",
+          "displayName": "Username"
+        },
+        {
+          "type": "text",
+          "displayName": "Password"
+        }
+      ]
+    },
+    {
+      "name": "onCredentialRetriveFailed",
+      "displayName": "Triggered when the biometrics fails to receive the stored username and passsword",
+      "type": "action",
+      "arguments": [
+        {
+          "type": "text",
+          "displayName": "Error message"
+        }
+      ]
+    },
+    {
+      "name": "onEnrollmentSuccess",
+      "displayName": "Triggered when the biometrics enrollment succeeds",
+      "type": "action"
+    },
+    {
+      "name": "onEnrollmentFailure",
+      "displayName": "Triggered when the biometrics enrollment fails",
+      "type": "action"
+    }
+  ]
+}
