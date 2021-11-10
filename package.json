@@ -1,12 +1,13 @@
 {
   "name": "pragmaflow-biometrics",
   "description": "TouchId and FaceId component for Adalo login",
-  "version": "1.0.13",
+  "version": "1.1.0",
   "main": "index.js",
   "license": "ISC",
   "author": "Steven McKeown",
   "scripts": {
-    "start": "tsc && adalo dev",
+    "start": "tsc --watch & adalo dev",
+    "build": "tsc",
     "login": "adalo login",
     "publish": "adalo publish"
   },
